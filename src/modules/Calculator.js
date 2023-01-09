@@ -9,7 +9,7 @@ export default class Calcuclator extends React.Component {
   render() {
     return (
       <main className="calculator">
-        <Result />
+        <div className="flex-center result">0</div>
         <div className="calculator-btns">
           <button type="button">AC</button>
           <button type="button">+/-</button>
@@ -39,5 +39,3 @@ export default class Calcuclator extends React.Component {
     );
   }
 }
-
-const Result = () => <div className="flex-center result">0</div>;
