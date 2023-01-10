@@ -1,56 +1,51 @@
-import React from 'react';
+import React, { useState } from 'react';
 import calculate from './logic/calculate';
 
-export default class Calcuclator extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
+const Calculator = () => {
+  const [total, setTotal] = useState(null);
+  const [next, setNext] = useState(null);
+  const [operation, setOperation] = useState(null);
 
-  componentWillUnmount() {
-    this.setState({});
-  }
-
-  onClickBtn = (event) => {
+  const onClickBtn = (event) => {
     const btnName = event.currentTarget.textContent;
-    this.setState((state) => calculate(state, btnName));
-  }
+    const result = calculate({ total, next, operation }, btnName);
+    setTotal(result.total);
+    setNext(result.next);
+    setOperation(result.operation);
+  };
 
-  getResult = () => {
-    const { next, total } = this.state;
-    return next || (total || '0');
-  }
+  const getResult = () => next || (total || '0');
 
-  render() {
-    return (
-      <main className="calculator">
-        <div className="flex-center result">{this.getResult()}</div>
-        <div className="calculator-btns">
-          <button type="button" onClick={this.onClickBtn}>AC</button>
-          <button type="button" onClick={this.onClickBtn}>+/-</button>
-          <button type="button" onClick={this.onClickBtn}>%</button>
-          <button type="button" onClick={this.onClickBtn} className="backgroundOrange">&divide;</button>
+  return (
+    <main className="calculator">
+      <div className="flex-center result">{getResult()}</div>
+      <div className="calculator-btns">
+        <button type="button" onClick={onClickBtn}>AC</button>
+        <button type="button" onClick={onClickBtn}>+/-</button>
+        <button type="button" onClick={onClickBtn}>%</button>
+        <button type="button" onClick={onClickBtn} className="backgroundOrange">&divide;</button>
 
-          <button type="button" onClick={this.onClickBtn}>7</button>
-          <button type="button" onClick={this.onClickBtn}>8</button>
-          <button type="button" onClick={this.onClickBtn}>9</button>
-          <button type="button" onClick={this.onClickBtn} className="backgroundOrange">x</button>
+        <button type="button" onClick={onClickBtn}>7</button>
+        <button type="button" onClick={onClickBtn}>8</button>
+        <button type="button" onClick={onClickBtn}>9</button>
+        <button type="button" onClick={onClickBtn} className="backgroundOrange">x</button>
 
-          <button type="button" onClick={this.onClickBtn}>4</button>
-          <button type="button" onClick={this.onClickBtn}>5</button>
-          <button type="button" onClick={this.onClickBtn}>6</button>
-          <button type="button" onClick={this.onClickBtn} className="backgroundOrange">-</button>
+        <button type="button" onClick={onClickBtn}>4</button>
+        <button type="button" onClick={onClickBtn}>5</button>
+        <button type="button" onClick={onClickBtn}>6</button>
+        <button type="button" onClick={onClickBtn} className="backgroundOrange">-</button>
 
-          <button type="button" onClick={this.onClickBtn}>1</button>
-          <button type="button" onClick={this.onClickBtn}>2</button>
-          <button type="button" onClick={this.onClickBtn}>3</button>
-          <button type="button" onClick={this.onClickBtn} className="backgroundOrange">+</button>
+        <button type="button" onClick={onClickBtn}>1</button>
+        <button type="button" onClick={onClickBtn}>2</button>
+        <button type="button" onClick={onClickBtn}>3</button>
+        <button type="button" onClick={onClickBtn} className="backgroundOrange">+</button>
 
-          <button type="button" onClick={this.onClickBtn} className="btn-zero">0</button>
-          <button type="button" onClick={this.onClickBtn}>.</button>
-          <button type="button" onClick={this.onClickBtn} className="backgroundOrange">=</button>
-        </div>
-      </main>
-    );
-  }
-}
+        <button type="button" onClick={onClickBtn} className="btn-zero">0</button>
+        <button type="button" onClick={onClickBtn}>.</button>
+        <button type="button" onClick={onClickBtn} className="backgroundOrange">=</button>
+      </div>
+    </main>
+  );
+};
+
+export default Calculator;
