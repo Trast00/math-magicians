@@ -14,7 +14,7 @@ export default class Calcuclator extends React.Component {
           <button type="button">AC</button>
           <button type="button">+/-</button>
           <button type="button">%</button>
-          <button type="button" className="backgroundOrange">/</button>
+          <button type="button" className="backgroundOrange">&divide;</button>
 
           <button type="button">7</button>
           <button type="button">8</button>
