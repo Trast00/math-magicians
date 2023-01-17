@@ -1,11 +1,38 @@
 .App {
   text-align: center;
+  width: 100vw;
+  overflow: hidden;
 }
 
 .flex-center {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 32px 12px 32px;
+}
+
+.navbar ul {
+  gap: 16px;
+  color: black;
+  list-style: none;
+  display: flex;
+
+}
+
+.calculator-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.calculator-histories {
+  width: 80%;
 }
 
 .calculator {
