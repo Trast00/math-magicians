@@ -19,7 +19,7 @@ const Calculator = () => {
   return (
     <main className="calculator-wrapper">
       <div className="calculator-histories">
-        <h2>Let's do some maths</h2>
+        <h2>Let s do some maths</h2>
       </div>
       <div className="calculator">
         <div className="flex-center result">{getResult()}</div>
