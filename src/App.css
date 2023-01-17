@@ -12,14 +12,13 @@
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  background-color: #FFDADA;
+  background-color: #ffdada;
   font-family: 'Roboto', sans-serif;
 
-  --color-primary: #F70F0F
+  --color-primary: #f70f0f;
 }
 
 @media screen and (max-width: 768px) {
-
   .calculator-wrapper {
     flex-direction: column-reverse;
     align-items: center;
@@ -51,7 +50,7 @@
 .nav-btns {
   padding: 12px;
   text-align: center;
-  color: #17181A;
+  color: #17181a;
   font-size: 1.25rem;
   text-decoration: none;
   border-radius: 25px;
@@ -59,8 +58,8 @@
 }
 
 .nav-btns:hover {
-  color: #FFDADA;
-  background-color: #17181A;
+  color: #ffdada;
+  background-color: #17181a;
 }
 
 .home {
@@ -110,7 +109,7 @@
   font-weight: 600;
   padding: 12px 18px 12px 16px;
   border: none;
-  background-color: #17181A;
+  background-color: #17181a;
   border-top-left-radius: 16px;
   border-top-right-radius: 16px;
   box-shadow: -6px -2px 40px 3px rgb(56, 56, 56);
@@ -123,7 +122,7 @@
   border: none;
   gap: 1px;
   color: var(--color-primary);
-  background-color: #17181A;
+  background-color: #17181a;
   border-bottom-left-radius: 16px;
   border-bottom-right-radius: 16px;
   box-shadow: -6px 30px 40px 3px rgb(56, 56, 56);
@@ -140,8 +139,8 @@
   cursor: pointer;
 }
 
-.calculator-btns > *:hover{
-  color: #B20000;
+.calculator-btns > *:hover {
+  color: #b20000;
   background-color: #ff5c5c;
 }
 
@@ -152,13 +151,13 @@
 
 .calculator-btns .btn-equal {
   color: white;
-  background-color: #FF1919;
+  background-color: #ff1919;
 }
 
 .backgroundBtns {
-  background-color: #B20000;
+  background-color: #b20000;
 }
 
 .backgroundBtns-secondary {
-  background-color: #5D5F60;
+  background-color: #5d5f60;
 }
