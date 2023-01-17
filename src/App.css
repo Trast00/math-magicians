@@ -1,7 +1,31 @@
 .App {
   text-align: center;
   width: 100vw;
+  height: 100vh;
   overflow: hidden;
+}
+
+.root-layout {
+  text-align: center;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-image: url('../images/background_desktop.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 768px) {
+  .root-layout {
+    background-image: url('../images/background_mobile.png');
+  }
+
+  .calculator-wrapper {
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: flex-start;
+  }
 }
 
 .flex-center {
@@ -25,23 +49,43 @@
 
 }
 
+.home {
+  width: 100%;
+  height: 100%;
+  padding: 24px;
+}
+
+.quote {
+  width: 100%;
+  height: 100%;
+  padding: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .calculator-wrapper {
   width: 100%;
   display: flex;
   justify-content: space-evenly;
+  padding: 24px;
 }
 
 .calculator-histories {
+  text-align: start;
   width: 80%;
 }
 
 .calculator {
   width: 100%;
-  max-width: 500px;
+  max-width: 320px;
   margin: 12px;
+  border-radius: 16px;
 }
 
 .result {
+  min-height: 200px;
+  align-items: flex-end;
   justify-content: flex-end;
   color: white;
   font-size: 20px;
@@ -57,22 +101,25 @@
 .calculator-btns {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding: 8px 12px 12px 12px;
   border: 1px solid #d3d3d3;
   gap: 1px;
   background-color: #d3d3d3;
 }
 
 .calculator-btns > * {
-  aspect-ratio: 2/1;
+  aspect-ratio: 1/1;
   font-size: 18px;
   border: none;
+  margin: 8px;
+  border-radius: 12px;
   background-color: #f3f3f3;
   cursor: pointer;
 }
 
 .calculator-btns .btn-zero {
   grid-column: span 2;
-  aspect-ratio: 4/1;
+  aspect-ratio: 2/1;
 }
 
 .backgroundOrange {
