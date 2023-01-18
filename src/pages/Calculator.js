@@ -17,7 +17,7 @@ const Calculator = () => {
   const getResult = () => next || (total || '0');
 
   return (
-    <main className="calculator-wrapper">
+    <main className="row calculator-wrapper">
       <div className="calculator-histories">
         <h2>Let s do some maths</h2>
       </div>

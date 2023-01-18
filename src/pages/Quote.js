@@ -1,5 +1,5 @@
 const Quote = () => (
-  <main className="quote">
+  <main className="flex-center quote">
     <h2>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit,
       sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
