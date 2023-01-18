@@ -1,5 +1,5 @@
 /* params: {total, next, operation}, buttonName */
-const calculate = require('./calculate');
+import calculate from './calculate';
 
 describe('test displayed on type on buttons', () => {
   let calculeObj = { total: null, next: null, operation: null };
