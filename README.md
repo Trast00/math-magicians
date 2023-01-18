@@ -15,6 +15,7 @@
   - [🔭 Future Features ](#-future-features-)
   - [🤝 Contributing ](#-contributing-)
   - [⭐️ Show your support ](#️-show-your-support-)
+  - [🙏 Acknowledgments ](#-acknowledgments-)
   - [📝 License ](#-license-)
 
 # 📖 Math-magicians <a name="about-project"></a>
@@ -99,6 +100,10 @@ Feel free to check the [issues page](https://github.com/Trast00/math-magicians/i
 Give a ⭐️ if you like this project! It's help a lot
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
+
+I would like to thank [Sadek Hossen Rony](https://www.behance.net/sadekud) and [SADEK Branding](https://www.behance.net/sadekbranding) [design idea](https://www.behance.net/gallery/121157423/DailyUi-Calculator-App-Design-Challenge-Sadekhr5)
 
 ## 📝 License <a name="license"></a>
 
