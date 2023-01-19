@@ -1,15 +1,14 @@
 import renderer from 'react-test-renderer';
 import React from 'react';
-import {
-  render, fireEvent, screen,
-} from '@testing-library/react';
+import { render, fireEvent, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 
 import App from './App';
 
 const navHeading = 'Math Magicians';
 const homeHeading = 'Welcom to our page';
-const quoteHeading = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis';
+const quoteHeading =
+  'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis';
 const calculatorHeading = 'Let s do some maths';
 
 describe('test rendering', () => {
@@ -50,4 +49,35 @@ describe('Test navigation', () => {
   });
 });
 
+describe('Test Calculator Basic interaction', () => {
+  test('test buttons interaction with screen', () => {
+    render(<App />);
+    const btnQuote = screen.getByText('Calculator');
+    const result = screen.getAllByText('0')[0]; // first element with 0
+    const btnZero = screen.getAllByText('0')[1]; // zero btn
+    fireEvent.click(btnQuote);
 
+    fireEvent.click(screen.getByText('2'));
+    fireEvent.click(btnZero);
+    fireEvent.click(screen.getByText('2'));
+    fireEvent.click(screen.getByText('3'));
+
+    expect(result).toHaveTextContent('2023');
+  });
+
+  test('test addiction with screen', () => {
+    render(<App />);
+    const btnQuote = screen.getByText('Calculator');
+    const result = screen.getAllByText('0')[0]; // first element with 0
+    fireEvent.click(btnQuote);
+
+    fireEvent.click(screen.getByText('AC'));
+    fireEvent.click(screen.getByText('5'));
+    fireEvent.click(screen.getByText('+'));
+    fireEvent.click(screen.getByText('1'));
+    fireEvent.click(screen.getByText('2'));
+    fireEvent.click(screen.getByText('='));
+
+    expect(result).toHaveTextContent((5 + 12).toString());
+  });
+});
