@@ -40,8 +40,8 @@ describe('Test navigation', () => {
 
   test('test naviation to calculator', () => {
     render(<App />);
-    const btnQuote = screen.getByText('Calculator');
-    fireEvent.click(btnQuote);
+    const btnCalculator = screen.getByText('Calculator');
+    fireEvent.click(btnCalculator);
     const titles = screen.getAllByRole('heading');
     expect(titles[1]).toHaveTextContent(calculatorHeading);
     expect(titles.indexOf(quoteHeading)).toBe(-1);
@@ -52,10 +52,10 @@ describe('Test navigation', () => {
 describe('Test Calculator Basic interaction', () => {
   test('test buttons interaction with screen', () => {
     render(<App />);
-    const btnQuote = screen.getByText('Calculator');
+    const btnCalculator = screen.getByText('Calculator');
+    fireEvent.click(btnCalculator);
     const result = screen.getAllByText('0')[0]; // first element with 0
     const btnZero = screen.getAllByText('0')[1]; // zero btn
-    fireEvent.click(btnQuote);
 
     fireEvent.click(screen.getByText('2'));
     fireEvent.click(btnZero);
@@ -67,9 +67,9 @@ describe('Test Calculator Basic interaction', () => {
 
   test('test addiction with screen', () => {
     render(<App />);
-    const btnQuote = screen.getByText('Calculator');
+    const btnCalculator = screen.getByText('Calculator');
+    fireEvent.click(btnCalculator);
     const result = screen.getAllByText('0')[0]; // first element with 0
-    fireEvent.click(btnQuote);
 
     fireEvent.click(screen.getByText('AC'));
     fireEvent.click(screen.getByText('5'));
