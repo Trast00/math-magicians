@@ -7,6 +7,7 @@
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
+  - [� Live Demo ](#-live-demo-)
   - [💻 Getting Started ](#-getting-started-)
     - [Setup](#setup)
     - [Install](#install)
@@ -39,6 +40,10 @@
 - **Use JSX**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🚀 Live Demo <a name="live-demo"></a>
+
+[Live Demo Link](https://math-magiciens-trast00.onrender.com/calculator)
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
@@ -82,8 +87,9 @@ To run the project, execute the following command:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **Add a calculator**
-- [ ] **Single Page App**
+- [x] **Add a calculator**
+- [x] **Single Page App**
+- [ ] **Add history for calculator**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

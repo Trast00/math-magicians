@@ -107,6 +107,7 @@
   font-weight: 600;
   padding: 12px 18px 12px 16px;
   border: none;
+  overflow: hidden;
   background-color: #17181a;
   border-top-left-radius: 16px;
   border-top-right-radius: 16px;
