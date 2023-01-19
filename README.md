@@ -43,7 +43,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-[Live Demo Link](https://math-magiciens-trast00.onrender.com/calculator)
+[Live Demo Link](https://math-magiciens-trast00.onrender.com/)
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
