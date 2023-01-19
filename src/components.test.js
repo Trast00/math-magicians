@@ -7,8 +7,7 @@ import App from './App';
 
 const navHeading = 'Math Magicians';
 const homeHeading = 'Welcom to our page';
-const quoteHeading =
-  'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis';
+const quoteHeading = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis';
 const calculatorHeading = 'Let s do some maths';
 
 describe('test rendering', () => {
